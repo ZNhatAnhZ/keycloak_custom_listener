@@ -1,0 +1,9 @@
+services:
+  keycloak:
+    build: .
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - "8081:8080"
+    entrypoint: ["/opt/keycloak/bin/kc.sh", "start-dev"]
